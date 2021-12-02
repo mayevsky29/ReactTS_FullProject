@@ -1,26 +1,32 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+  // Маршрути
+import { BrowserRouter, Routes, Route, Outlet, Link } 
+  from 'react-router-dom';
+  // Components
+import LoginPage from './components/auth/Login';
+import NoMatch from './components/NoMatch';
+import HomePage from './components/Home';
+import DefaultLayout from './components/containers/DefaultLayout';
+import RegisterPage from './components/auth/Register';
+import AddCar from './components/Auto/Create';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+      <Route path="/" element={<DefaultLayout />}>
+          <Route index element={<HomePage />} />
+          <Route path="login" element={< LoginPage/>} />
+          <Route path="register" element={< RegisterPage/>} />
+          <Route path="/auto/Create" element={< AddCar/>} />
+          <Route path="*" element={<NoMatch />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
+
+
 
 export default App;
