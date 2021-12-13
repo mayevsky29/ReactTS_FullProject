@@ -1,5 +1,6 @@
 export enum AuthActionTypes {
-    LOGIN_AUTH = "LOGIN_AUTH"
+    LOGIN_AUTH = "LOGIN_AUTH",
+    LOGIN_AUTH_SUCCESS = "LOGIN_AUTH_SUCCESS",
 }
 
 // Модель для входу на сайт
@@ -32,6 +33,10 @@ export interface AuthState {
 export interface LoginAuthAction {
     type: AuthActionTypes.LOGIN_AUTH,
     payload: IUser
+}
+export interface LoginAuthSuccessAction {
+    type: AuthActionTypes.LOGIN_AUTH_SUCCESS;
+    payload: IUser;
 }
 
 export type AuthAction = LoginAuthAction;

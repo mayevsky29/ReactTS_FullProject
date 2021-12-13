@@ -8,7 +8,7 @@ import LoginPage from './components/auth/Login';
 import NoMatch from './components/NoMatch';
 import HomePage from './components/Home';
 import DefaultLayout from './components/containers/DefaultLayout';
-import RegisterPage from './components/auth/Register';
+import RegisterPage from './components/auth/Register/index';
 import AddCar from './components/Auto/Create';
 
 function App() {
