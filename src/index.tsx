@@ -10,10 +10,10 @@ import { Provider } from "react-redux";
 import { store } from "./store";
 import {AuthUser} from './components/auth/Login/actions';
 
-const token = localStorage.users as string;
-if(token) {
-  AuthUser(token, store.dispatch);
-}
+// const token = localStorage.users as string;
+// if(token) {
+//   AuthUser(token, store.dispatch);
+// }
 
 ReactDOM.render(
   <Provider store={store}>

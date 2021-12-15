@@ -2,18 +2,18 @@ import classNames from "classnames";
 import React from "react";
 
 interface InputGroupProps {
-    label: string;
+  label: string;
   field: string;
-  touched?: boolean;
-  type?: "text" | "email" | "password";
+  touched?: boolean | null;
+  type?: "text" | "email" | "password" | "file" |"number";
   error?: null | string;
-  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void,
 }
 
 export const InputGroup: React.FC<InputGroupProps> = ({
     label,
     field,
-    touched,
+    touched = null,
     type = "text",
     error = null,
     onChange,

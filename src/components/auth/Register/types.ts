@@ -25,6 +25,7 @@ export interface RegisterStartAction {
   export interface IRegister {
       name?: string;
       email?: string;
+      photo?: FileList[];
       password?: string;
       confirmPassword?: string;
   }
