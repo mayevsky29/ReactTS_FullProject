@@ -10,6 +10,7 @@ import HomePage from './components/Home';
 import DefaultLayout from './components/containers/DefaultLayout';
 import RegisterPage from './components/auth/Register/index';
 import AddCar from './components/Auto/Create';
+import ProductsListPage from './components/products/List';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route index element={<HomePage />} />
           <Route path="login" element={< LoginPage/>} />
           <Route path="register" element={< RegisterPage/>} />
+          <Route path="products" element={<ProductsListPage/>} />
           <Route path="/auto/Create" element={< AddCar/>} />
           <Route path="*" element={<NoMatch />} />
         </Route>
